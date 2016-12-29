@@ -67,7 +67,7 @@ Pod::Spec.new do |s|
                                           -e 's@"(?:(?!RAC)(EXT.*|metamacros))\.h"@"RAC\1.h"@' '{}' \;
                         find . -regex '.*\.[hm]' \
                                -exec perl -pi \
-                                          -e 's@<ReactiveObjC/(?:(?!RAC)(EXT.*))\.h>@<ReactiveObjC/RAC\1.h>@' '{}' \;
+                                          -e 's@"ReactiveObjC/(?:(?!RAC)(EXT.*))\.h"@"ReactiveObjC/RAC\1.h"@' '{}' \;
                       CMD
 
 end
